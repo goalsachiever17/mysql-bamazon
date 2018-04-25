@@ -5,20 +5,37 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "password",
-    database: "bamazon_DB"
+    password: "root",
+    database: "bamazonDB"
 
 });
 
 connection.connect(function(err, res) {
     if (err) throw err;
-    // selectAll();
-    orderInput();
+     selectAll();
+   // orderInput();
 });
 
 function selectAll() {
     connection.query("SELECT * FROM products", function(err, res) {
-        if (err) throw err;
+        if (err) {throw err;}
+        else {
+         // console.log(res);
+         // console.log(res[0]);
+         for (var i = 0; i<res.length; i++) {
+            console.log(res[i].Item_Id);
+          console.log(res[i].product_name);
+          console.log(res[i].department_name);
+          console.log(res[i].price);
+          console.log(res[i].stock_quantity);
+
+         }
+          
+
+
+
+
+        }
 
     });
 };
