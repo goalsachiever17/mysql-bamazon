@@ -13,7 +13,7 @@ var connection = mysql.createConnection({
 connection.connect(function(err, res) {
     if (err) throw err;
      selectAll();
-   // orderInput();
+    
 });
 
 function selectAll() {
@@ -23,14 +23,11 @@ function selectAll() {
          // console.log(res);
          // console.log(res[0]);
          for (var i = 0; i<res.length; i++) {
-            console.log(res[i].Item_Id);
-          console.log(res[i].product_name);
-          console.log(res[i].department_name);
-          console.log(res[i].price);
-          console.log(res[i].stock_quantity);
+            console.log(res[i].Item_Id +".) "+res[i].product_name +" "+res[i].department_name+" "+res[i].price+" "+res[i].stock_quantity);
+        
 
          }
-          
+  orderInput();        
 
 
 
