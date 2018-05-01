@@ -1,5 +1,5 @@
 
-![alt text](./myresult.png)
+![alt text](./my_result.png)
 
 
 MY BamazonProject
